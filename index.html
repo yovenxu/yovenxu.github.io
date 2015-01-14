@@ -3,8 +3,56 @@
 <head>
 	<meta charset="UTF-8">
 	<title>GitHub of YY</title>
+	<style>
+	.title { text-align: center; font-size:50px; color: #666666; margin: 50px 0 0 0;}
+	.logo{ display:block; margin:20px auto; width:150px; height:150px; overflow:hidden; border-radius:6px;}
+	.workListBoard{ width:500px; min-height:300px; margin:0 auto; }
+	.workListBoard h3{ font-size: 30px; font-weight: normal; text-align:center; color:#999999; }
+	ul.workList{ padding:0 0 0 17px; }
+	.workList li{ font-size: 16px; text-align:left; }
+	.workList a:link, .workList a:visited, .workList a:active{ 
+		color:#5FB7E9;
+		text-decoration:none;
+		line-height:25px;
+	}
+	h4 {font-size: 20px;}
+	h4 a {text-decoration:none; color:#333; font-weight:bold;}
+	h4 a:hover {color:#999;}
+	.copyright{margin:50px 0 0 0;height:50px;color:#999999;font-family:Tahoma;font-size: 12px;text-align:center;}
+	.copyright a {color:#999999;text-decoration:none;}
+	.copyright a:hover, .copyright a:focus{ outline:none; text-decoration:underline;}
+	</style>
 </head>
 <body>
-	Welcome to GitHub of YY !
+	<div class="title">
+		Yov3n Coding In <span class="J_year"></span>
+	</div>
+	<img src="https://avatars3.githubusercontent.com/u/4069654?v=3&s=460" class="logo" alt="">
+	<div class="line"></div>
+	<div class="workListBoard">
+        <h3>Works List</h3>
+        <h4><a href="https://github.com/yovenxu/HTML5">HTML5 API</a></h4>
+        <ul class="workList">
+            <li><a href="https://github.com/yovenxu/HTML5/tree/master/Canvas%20Eraser%20Effect">Canvas Eraser Effect</a></li>
+        </ul>
+        <h4><a href="https://github.com/yovenxu/Demo">Demo</a></h4>
+        <ul class="workList">
+            <li><a href="https://github.com/yovenxu/Demo/tree/master/Vroom-Yetton-Jago%20Decision%20Model">Vroom-Yetton-Jago Decision Model</a></li>
+        </ul>
+    </div>
+    <div class="copyright">Copyright © <span class="J_year"></span class="J_year"> <a href="http://yovenxu.github.io/">Yov3n Coding</a>. All Rights Reserved.</div>
+	<script>
+	window.onload = function () {
+		setYears();
+
+		function setYears () {
+			var fullYear = new Date().getFullYear();
+			var J_years = document.getElementsByClassName('J_year');
+			for (var i = 0, len = J_years.length; i < len; i++) {
+				J_years[i].innerHTML = fullYear;
+			}
+		}
+	};
+	</script>
 </body>
 </html>
